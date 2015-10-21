@@ -2,5 +2,8 @@
   "name": "Mattermost Sample",
   "description": "Mattermost running on a Heroku dyno",
   "repository": "https://github.com/tommyvn/mattermost-heroku",
-  "keywords": ["mattermost"]
+  "keywords": ["mattermost"],
+  "env": {
+    "BUILDPACK_URL": "http://github.com/kr/heroku-buildpack-inline.git"
+  }
 }
