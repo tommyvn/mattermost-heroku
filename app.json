@@ -1,0 +1,6 @@
+{
+  "name": "Mattermost Sample",
+  "description": "Mattermost running on a Heroku dyno",
+  "repository": "https://github.com/tommyvn/mattermost-heroku",
+  "keywords": ["mattermost"]
+}
