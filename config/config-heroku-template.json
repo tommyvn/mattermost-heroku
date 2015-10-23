@@ -19,13 +19,13 @@
         "RestrictCreationToDomains": ""
     },
     "SqlSettings": {
-        "DriverName": "${SQL_SETTINGS__DRIVER_NAME}",
-        "DataSource": "${SQL_SETTINGS__DATA_SOURCE}",
+        "DriverName": "postgres",
+        "DataSource": "${DATABASE_URL}",
         "DataSourceReplicas": [],
         "MaxIdleConns": 10,
         "MaxOpenConns": 10,
         "Trace": false,
-        "AtRestEncryptKey": "7rAh6iwQCkV4cA1Gsg3fgGOXJAQ43QVg"
+        "AtRestEncryptKey": "${SQL_SETTINGS__AT_REST_ENCRYPT_KEY}"
     },
     "LogSettings": {
         "EnableConsole": true,
@@ -36,10 +36,10 @@
         "FileLocation": ""
     },
     "FileSettings": {
-        "DriverName": "local",
+        "DriverName": "${FILE_SETTINGS__DRIVER_NAME}",
         "Directory": "./data/",
         "EnablePublicLink": true,
-        "PublicLinkSalt": "A705AklYF8MFDOfcwh3I488G8vtLlVip",
+        "PublicLinkSalt": "${FILE_SETTINGS__PUBLIC_LINK_SALT}",
         "ThumbnailWidth": 120,
         "ThumbnailHeight": 100,
         "PreviewWidth": 1024,
@@ -47,10 +47,10 @@
         "ProfileWidth": 128,
         "ProfileHeight": 128,
         "InitialFont": "luximbi.ttf",
-        "AmazonS3AccessKeyId": "",
-        "AmazonS3SecretAccessKey": "",
-        "AmazonS3Bucket": "",
-        "AmazonS3Region": ""
+        "AmazonS3AccessKeyId": "${FILE_SETTINGS__AMAZON_S3_ACCESS_KEY_ID}",
+        "AmazonS3SecretAccessKey": "${FILE_SETTINGS__AMAZON_S3_SECRET_ACCESS_KEY}",
+        "AmazonS3Bucket": "${FILE_SETTINGS__AMAZON_S3_BUCKET}",
+        "AmazonS3Region": "${FILE_SETTINGS__AMAZON_S3_REGION}"
     },
     "EmailSettings": {
         "EnableSignUpWithEmail": true,
@@ -63,8 +63,8 @@
         "SMTPServer": "",
         "SMTPPort": "",
         "ConnectionSecurity": "",
-        "InviteSalt": "bjlSR4QqkXFBr7TP4oDzlfZmcNuH9YoS",
-        "PasswordResetSalt": "vZ4DcKyVVRlKHHJpexcuXzojkE5PZ5eL",
+        "InviteSalt": "${EMAIL_SETTINGS__INVITE_SALT}",
+        "PasswordResetSalt": "${EMAIL_SETTINGS__PASSWORD_RESET_SALT}",
         "ApplePushServer": "",
         "ApplePushCertPublic": "",
         "ApplePushCertPrivate": ""
