@@ -3,7 +3,45 @@
   "description": "Mattermost running on a Heroku dyno",
   "repository": "https://github.com/tommyvn/mattermost-heroku",
   "keywords": ["mattermost"],
+  "success_url": "/",
   "env": {
-    "BUILDPACK_URL": "http://github.com/kr/heroku-buildpack-inline.git"
+    "BUILDPACK_URL": "http://github.com/kr/heroku-buildpack-inline.git",
+    "TEAM_SETTINGS__SITE_NAME": "Mattermost",
+    "SQL_SETTINGS__AT_REST_ENCRYPT_KEY": {
+            "description": "SqlSettings AtRestEncryptKey",
+            "generator": "secret"
+    },
+    "FILE_SETTINGS__PUBLIC_LINK_SALT": {
+            "description": "FileSettings PublicLinkSalt",
+            "generator": "secret"
+    },
+    "FILE_SETTINGS__DRIVER_NAME": {
+        "description": "FileSettings DriverName - local or amazons3. WARNING: If this isn't amazons3 uploads will disapear at regular intervales as dynos cycle.",
+        "value": "local"
+    },
+    "FILE_SETTINGS__AMAZON_S3_ACCESS_KEY_ID": {
+        "description": "FileSettings AmazonS3AccessKeyId - WARNING: If this isn't an amazon s3 key uploads will disapear at regular intervales as dynos cycle.",
+        "value": ""
+    },
+    "FILE_SETTINGS__AMAZON_S3_SECRET_ACCESS_KEY": {
+        "description": "FileSettings AmazonS3SecretAccessKey - WARNING: If this isn't an amazon s3 secret uploads will disapear at regular intervales as dynos cycle.",
+        "value": ""
+    },
+    "FILE_SETTINGS__AMAZON_S3_BUCKET": {
+        "description": "FileSettings AmazonS3Bucket - WARNING: If this isn't an amazon s3 bucket uploads will disapear at regular intervales as dynos cycle.",
+        "value": ""
+    },
+    "FILE_SETTINGS__AMAZON_S3_REGION": {
+        "description": "FileSettings AmazonS3Region",
+        "value": "us-east-1"
+    },
+    "EMAIL_SETTINGS__INVITE_SALT": {
+            "description": "EmailSettings InviteSalt",
+            "generator": "secret"
+    },
+    "EMAIL_SETTINGS__PASSWORD_RESET_SALT": {
+            "description": "EmailSettings PasswordResetSalt",
+            "generator": "secret"
+    }
   }
 }
