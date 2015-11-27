@@ -6,6 +6,6 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-echo "-----> Retrieving mattermost v1.1.0 tar"
-curl -s -L https://github.com/mattermost/platform/releases/download/v1.1.0/mattermost.tar.gz | tar -zxf - --strip-components=1 -C ${BUILD_DIR}
+echo "-----> Retrieving mattermost v1.2.1 tar"
+curl -s -L https://github.com/mattermost/platform/releases/download/v1.2.1/mattermost.tar.gz | tar -zxf - --strip-components=1 -C ${BUILD_DIR}
 mkdir data/
