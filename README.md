@@ -11,5 +11,5 @@
 
 ## ToDo
 
-1. Configurable versions (currently hard-coded to v1.1.0)
+1. Configurable versions (currently hard-coded to v1.2.1)
 2. More configurable options
