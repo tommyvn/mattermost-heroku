@@ -11,5 +11,7 @@
 
 ## ToDo
 
-1. Configurable versions (currently hard-coded to v1.2.1)
+1. Configurable versions (currently hard-coded to v1.4.0)
 2. More configurable options
+
+To use a different version of Mattermost update the version specified in `bin/compile`
