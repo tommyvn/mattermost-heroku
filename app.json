@@ -6,6 +6,11 @@
   "success_url": "/",
   "env": {
     "BUILDPACK_URL": "http://github.com/kr/heroku-buildpack-inline.git",
+    "MATTERMOST_DOWNLOAD_URI": {
+        "description": "copy-paste the download link to the latest COMPILED version from http://www.mattermost.org/download/ into here",
+        "required": true,
+        "value": ""
+    },
     "TEAM_SETTINGS__SITE_NAME": "Mattermost",
     "SQL_SETTINGS__AT_REST_ENCRYPT_KEY": {
             "description": "SqlSettings AtRestEncryptKey",
